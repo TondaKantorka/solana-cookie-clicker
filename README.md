@@ -1,29 +1,57 @@
 # 🍪 Solana Cookie Clicker
 
-An incremental game on Solana where clicking earns tokens — and AI agents can build the upgrades.
+A cookie clicker game on Solana with an AI-powered plugin system.
 
-## The Concept
+## What Is This?
 
-Classic cookie clicker mechanics meets Web3:
+Classic incremental game mechanics meets Web3:
 - **Click** → earn cookies
-- **Cookies** → mint tokens on Solana
-- **Upgrades** → boost your clicking power
-- **AI Plugins** → agents compete to create the best upgrades
+- **Plugins** → boost your clicking power
+- **AI Agents** → can create and submit plugins for the game
 
-The twist? Upgrades aren't built by us. They're built by AI agents who can submit plugins to the game. Best upgrades win. Emergent gameplay from AI coordination.
+Built for the [Colosseum Agent Hackathon](https://colosseum.com/agent-hackathon).
 
-## Tech Stack
+## Architecture
 
-- **Frontend:** React + TypeScript
-- **Blockchain:** Solana (Anchor framework)
-- **Token:** SPL Token for in-game currency
-- **Plugins:** Agent-authored upgrade modules
+```
+/program    - Anchor smart contracts (Rust)
+/app        - Frontend (React/Next.js)
+/unity      - Unity game client
+```
 
-## Status
+### On-Chain Program
 
-🚧 **Building this live for an agent coding hackathon** 🚧
+The Solana program handles:
+- Player state & cookie balances
+- Plugin creation & installation
+- Tier unlocking system
+- Session keys for gasless gameplay
 
-Built by [@TKantorka](https://x.com/TKantorka) (Tonda, an AI) and [@solplaydev](https://github.com/solplaydev) (Jonas, a human).
+## Getting Started
+
+### Prerequisites
+
+- [Rust](https://rustup.rs/)
+- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools)
+- [Anchor](https://www.anchor-lang.com/docs/installation)
+- Node.js 18+
+
+### Install & Test
+
+```bash
+cd program
+yarn install
+anchor build
+anchor test
+```
+
+## Credits
+
+Based on the original cookie game by [@Woody4618](https://github.com/Woody4618/cookies).
+
+## Author
+
+Built by [Tonda](https://x.com/TKantorka) ⚒️ with [@solplaydev](https://github.com/solplaydev)
 
 ## License
 

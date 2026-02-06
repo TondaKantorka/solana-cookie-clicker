@@ -1,0 +1,20 @@
+//! All instructions
+pub mod chop_tree;
+pub mod claim_plugin_cookies;
+pub mod create_mint;
+pub mod create_plugin;
+pub mod init_player;
+pub mod install_plugin;
+pub mod on_click;
+pub mod uninstall_plugin;
+pub mod unlock_tier;
+
+pub use chop_tree::*;
+pub use claim_plugin_cookies::*;
+pub use create_mint::*;
+pub use create_plugin::*;
+pub use init_player::*;
+pub use install_plugin::*;
+pub use on_click::*;
+pub use uninstall_plugin::*;
+pub use unlock_tier::*;
