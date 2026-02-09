@@ -27,8 +27,8 @@ const SessionKeyButton = () => {
         let sessionTokenPubkey: PublicKey;
         if (typeof sessionWallet.sessionToken === "string") {
           sessionTokenPubkey = new PublicKey(sessionWallet.sessionToken);
-        } else if (sessionWallet.sessionToken instanceof PublicKey) {
-          sessionTokenPubkey = sessionWallet.sessionToken;
+        } else if ((sessionWallet.sessionToken as object) instanceof PublicKey) {
+          sessionTokenPubkey = sessionWallet.sessionToken as PublicKey;
         } else {
           console.log("Session token is not a valid PublicKey or string");
           setSessionExists(false);

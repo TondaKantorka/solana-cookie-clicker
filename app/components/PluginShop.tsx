@@ -230,12 +230,6 @@ const PluginShop = forwardRef<{ refresh: () => void }, PluginShopProps>(
           .installPlugin()
           .accounts({
             player: publicKey,
-            playerData: playerDataPDA,
-            plugin: pluginPDA,
-            playerPluginSlot: playerPluginSlotPDA,
-            playerTokenAccount,
-            creatorTokenAccount,
-            cookieMint: cookieMintPDA,
           })
           .rpc();
 
