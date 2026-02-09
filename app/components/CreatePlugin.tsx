@@ -47,7 +47,7 @@ const CreatePlugin = ({ onPluginCreated }: CreatePluginProps) => {
 
   const [cookieMintPDA] = PublicKey.findProgramAddressSync(
     [Buffer.from("reward")],
-    program.programId
+    program.programId,
   );
 
   const createPlugin = async () => {
@@ -86,7 +86,7 @@ const CreatePlugin = ({ onPluginCreated }: CreatePluginProps) => {
 
       const [playerDataPDA] = PublicKey.findProgramAddressSync(
         [Buffer.from("player"), publicKey.toBuffer()],
-        program.programId
+        program.programId,
       );
 
       // Fetch current plugin counter to derive the next plugin PDA
@@ -98,12 +98,12 @@ const CreatePlugin = ({ onPluginCreated }: CreatePluginProps) => {
           Buffer.from("plugin"),
           new Uint8Array(new BigInt64Array([BigInt(pluginId)]).buffer),
         ],
-        program.programId
+        program.programId,
       );
 
       const creatorTokenAccount = getAssociatedTokenAddressSync(
         cookieMintPDA,
-        publicKey
+        publicKey,
       );
 
       const creatorShareBps = creatorShare * 100; // Convert % to basis points
@@ -112,10 +112,6 @@ const CreatePlugin = ({ onPluginCreated }: CreatePluginProps) => {
         .createPlugin(tier, metadataUri, creatorShareBps)
         .accounts({
           creator: publicKey,
-          playerData: playerDataPDA,
-          plugin: pluginPDA,
-          creatorTokenAccount,
-          cookieMint: cookieMintPDA,
         })
         .rpc();
 

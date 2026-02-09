@@ -108,9 +108,6 @@ const UnlockTiers = forwardRef<{ refresh: () => void }, {}>((props, ref) => {
         .unlockTier(tier)
         .accounts({
           player: publicKey,
-          playerData: playerDataPDA,
-          playerTokenAccount,
-          cookieMint: cookieMintPDA,
         })
         .rpc();
 
