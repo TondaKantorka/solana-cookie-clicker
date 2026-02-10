@@ -29,8 +29,8 @@ pub fn on_click(ctx: Context<OnClick>) -> Result<()> {
         signer,
     );
 
-    // Mint 100 cookies per click - TESTING BOOST! 🍪
-    let amount = 100u64;
+    // Mint 1 cookie per click
+    let amount = 1u64;
 
     mint_to(cpi_ctx, amount)?;
     Ok(())
