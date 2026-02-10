@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.localnet]
-cookie = "RduLn3LBtgQuB3S4EXa2ZySmRLQpbWirujg1WiLEft1"
+cookie = "H9BK2gP55dKbadkAwroaTZo5L5vw3QuDtSLmE6WbWKE9"
 
 [registry]
 url = "https://anchor.projectserum.com"

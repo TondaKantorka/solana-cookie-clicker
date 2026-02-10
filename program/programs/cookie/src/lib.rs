@@ -7,7 +7,7 @@ pub mod instructions;
 pub mod state;
 use instructions::*;
 
-declare_id!("RduLn3LBtgQuB3S4EXa2ZySmRLQpbWirujg1WiLEft1");
+declare_id!("H9BK2gP55dKbadkAwroaTZo5L5vw3QuDtSLmE6WbWKE9");
 
 #[program]
 pub mod cookie {

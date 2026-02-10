@@ -5,7 +5,7 @@
  * IDL can be found at `target/idl/cookie.json`.
  */
 export type Cookie = {
-  "address": "RduLn3LBtgQuB3S4EXa2ZySmRLQpbWirujg1WiLEft1",
+  "address": "H9BK2gP55dKbadkAwroaTZo5L5vw3QuDtSLmE6WbWKE9",
   "metadata": {
     "name": "cookie",
     "version": "0.1.0",
